@@ -1,0 +1,42 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>LoadBalancing Singup Form</title>
+
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/singup_form.js"></script>
+<script type="text/javascript" src="zebra_datepicker/public/javascript/zebra_datepicker.js"></script>
+<link rel="stylesheet" href="zebra_datepicker/public/css/default.css" type="text/css">
+</head>
+
+<body>
+
+<div class="form-style-10">
+<h1>Fill the details</h1>
+<form class="form-horizontal" name="make_trans" action="https://script.google.com/macros/s/AKfycbwcWE_RaxOU502cgZ-9vQULzZyD8AO8JL3YpTDHByQHzC3aC24/exec" method="post">
+   
+    <div class="section"><span>1</span>User Details</div>  
+    <div class="inner-wrap">
+        <label>Email Id<input type="email" id="email_id" name="email_id" required/>
+		<label>username<input type="text" id="username" name="username" required/>
+		<label>password<input type="password" id="password" name="password" required/>
+		<label>confirm password<input type="password" id="cpassword" name="cpassword" required/>
+		<label>date of birth<input type="text" id="dob" name="dob" required/>
+		<label>Gender
+			<select id="gender" name="gender"  required/><option value=null disabled selected>Please Select Gender</option><option value="female">Female</option><option value="male">Male</option></select>		
+		<label>mobile no<input type="text" id="mobile_number" name="mobile_number" maxlength=10 required/>
+	</div>
+	
+    <div class="button-section">
+     <input type="submit" name="Submit" value="Submit"/>
+    </div>
+</form>
+</div>
+
+</body>
+</html>

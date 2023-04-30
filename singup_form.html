@@ -1,0 +1,37 @@
+function doPost(e) {
+    var email_id=e.parameter['email_id'];
+    var username=e.parameter['username'];
+    var password=e.parameter['password'];
+    var cpassword=e.parameter['cpassword'];
+    var dob=e.parameter['dob'];
+    var gender=e.parameter['gender'];
+    var mobile_number=e.parameter['mobile_number'];
+    
+    var usermaster_sheet=SpreadsheetApp.openById('19m1HMSaSm4DBWq5zvygho_PFwGj_wTyF2rn57W2YAtc').getSheetByName('UserMaster');
+    
+    usermaster_sheet.appendRow([email_id,username,password,dob,gender,mobile_number,(Math.random().toString(36)+'00000000000000000').slice(2,10+2)]);
+    
+    return HtmlService.createHtmlOutputFromFile('return_msg').setSandboxMode(HtmlService.SandboxMode.IFRAME);
+  }
+  
+  
+  function sign(){
+    var message="testing String"
+    var signature = Utilities.computeDigest(Utilities.DigestAlgorithm.MD5,message,Utilities.Charset.US_ASCII);
+    
+    Logger.log(signature);
+    
+    var signatureStr = '';
+      for (i = 0; i < signature.length; i++) {
+        var byte = signature[i];
+        if (byte < 0)
+          byte += 256;
+        var byteStr = byte.toString(16);
+        // Ensure we have 2 chars in our byte, pad with 0
+        if (byteStr.length == 1) byteStr = '0'+byteStr;
+        signatureStr += byteStr;
+      }   
+    Logger.log(signatureStr);
+    return signatureStr;
+  }
+  
