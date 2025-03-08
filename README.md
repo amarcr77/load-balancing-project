@@ -11,6 +11,7 @@ the arrival date and the Main Controller (Admin) balances the load.
 
 
 Algorithm 1 Best Partition Searching
+
 begin
 while job do
 searchBestPartition (job);
