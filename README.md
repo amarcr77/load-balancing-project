@@ -38,6 +38,7 @@ details about the interview.
 In this way all the jobs are processed in the first come first serve basis.
 
 Conclusion
+
 The response time and data transfer cost is a challenge of every engineer to develop
 the products that can increase the business performance and high customer
 satisfaction in the cloud based sector. The several strategies lack efficient scheduling
